@@ -9,11 +9,11 @@ const navItems = [nav1, nav2, nav3, nav4, nav5];
 
 
 //Navigation Animation function
-function navAnimation(dir1, dir2) {
+/*function navAnimation(dir1, dir2) {
     navItems.forEach((nav, i)=>{
     nav.classList.replace(`slide-${dir1}-${i +1}`, `slide-${dir2}-${i +1}`);
     })
-}
+}*/
 
 function toggleNav() {
 
@@ -26,7 +26,17 @@ function toggleNav() {
         overlay.classList.replace('overlay-slide-left','overlay-slide-right'); 
         
         // Animate In- Nav Items
-        navAnimation('out', 'in');
+        //navAnimation('out', 'in');
+        nav1.classList.remove('slide-out-1');
+        nav1.classList.add('slide-in-1');
+        nav2.classList.remove('slide-out-2');
+        nav2.classList.add('slide-in-2');
+        nav3.classList.remove('slide-out-3');
+        nav3.classList.add('slide-in-3');
+        nav4.classList.remove('slide-out-4');
+        nav4.classList.add('slide-in-4');
+        nav5.classList.remove('slide-out-5');
+        nav5.classList.add('slide-in-5');
         
         
         
@@ -35,7 +45,17 @@ function toggleNav() {
         overlay.classList.replace('overlay-slide-right','overlay-slide-left');
 
         // Animate Out- Nav Items
-        navAnimation('out', 'in');
+        //navAnimation('out', 'in');
+        nav1.classList.remove('slide-in-1');
+        nav1.classList.add('slide-out-1');
+        nav2.classList.remove('slide-in-2');
+        nav2.classList.add('slide-out-2');
+        nav3.classList.remove('slide-in-3');
+        nav3.classList.add('slide-out-3');
+        nav4.classList.remove('slide-in-4');
+        nav4.classList.add('slide-out-4');
+        nav5.classList.remove('slide-in-5');
+        nav5.classList.add('slide-out-5');
     }
 }
 
